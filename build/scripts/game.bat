@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\game-1.0-SNAPSHOT.jar
+set CLASSPATH=%APP_HOME%\lib\game-1.jar
 
 @rem Execute game
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GAME_OPTS%  -classpath "%CLASSPATH%" com.griddynamics.rpg.App %CMD_LINE_ARGS%
