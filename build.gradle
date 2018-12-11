@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'application'
 }
-int count = 1
+
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
     String[] version
@@ -14,7 +14,8 @@ def getVersionName = { ->
     out = rootProject.file('src/main/resources/version.txt').text.trim()
     version = out.split("\n")
     String newVersion = version[0]
-    if (stdout.toString().equals(version[1])) {
+    String stdoutString = stdout.toString().substring(0, stdout.toString().size() - 1)
+    if (!stdoutString.equals(version[1])) {
         newVersion = (Integer.parseInt(version[0]) + 1).toString()
         rootProject.file('src/main/resources/version.txt').write(newVersion + "\n" + stdout.toString())
     }
