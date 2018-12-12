@@ -28,6 +28,8 @@ public class ArcherRustedDagger implements Weapon {
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.ARCHER);
     @Getter
+    @Builder.Default
+
     private int roll = 1;
 
     @Override

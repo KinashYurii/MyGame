@@ -19,7 +19,9 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RustedShield implements Weapon {
+    @Builder.Default
     private int armor = 20;
+    @Builder.Default
     private double health = 30;
     @Getter
     private final WeaponType weaponType = WeaponType.ONE_HAND_WEAPON;

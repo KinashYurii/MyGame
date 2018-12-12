@@ -26,8 +26,11 @@ public class Whip implements Weapon {
     @ToString.Exclude
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.WARRIOR);
+    @Builder.Default
     double chance = 0.15;
+    @Builder.Default
     int damage = 12;
+    @Builder.Default
     int roll = 1;
 
     @Override

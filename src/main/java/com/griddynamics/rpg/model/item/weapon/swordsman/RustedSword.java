@@ -26,8 +26,11 @@ public class RustedSword implements Weapon {
     @ToString.Exclude
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.SWORDSMAN);
+    @Builder.Default
     double chance = 0.2;
+    @Builder.Default
     int damage = 8;
+    @Builder.Default
     int roll = 1;
 
     @Override

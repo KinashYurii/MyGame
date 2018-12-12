@@ -26,9 +26,12 @@ public class RustedAxe implements Weapon {
     @ToString.Exclude
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.WARRIOR);
-    int damage = 1000;
-    int roll = 10;
-    double chance = 0.15;
+    @Builder.Default
+    private int damage = 1000;
+    @Builder.Default
+    private int roll = 10;
+    @Builder.Default
+    private double  chance = 0.15;
     @Override
     public List<Attack> getAttack(Boolean prepared) {
         int range = 1;

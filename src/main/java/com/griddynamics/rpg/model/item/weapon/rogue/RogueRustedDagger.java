@@ -20,6 +20,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class RogueRustedDagger implements Weapon {
     @Getter
+    @Builder.Default
     private int damage = 6;
     @Getter
     private final WeaponType weaponType = WeaponType.ONE_HAND_WEAPON;
@@ -29,6 +30,7 @@ public class RogueRustedDagger implements Weapon {
     @ToString.Exclude
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.ROGUE);
+    @Builder.Default
     @Getter
     private int roll = 1;
 

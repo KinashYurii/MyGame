@@ -22,6 +22,7 @@ import java.util.*;
 public class WoodenBow implements Weapon {
     private final int agility = 1;
     @Getter
+    @Builder.Default
     private int damage = 10;
     @Getter
     private final WeaponType weaponType = WeaponType.ONE_HAND_WEAPON;
@@ -32,10 +33,15 @@ public class WoodenBow implements Weapon {
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.ARCHER);
     @Getter
+    @Builder.Default
     private int roll = 1;
+    @Builder.Default
     private int preparedRoll = 2;
+    @Builder.Default
     private int ammo = 5;
-    private int currentAmmo = ammo;
+    @Builder.Default
+    private int currentAmmo = 5;
+    @Builder.Default
     int range = 3;
 
     @Override

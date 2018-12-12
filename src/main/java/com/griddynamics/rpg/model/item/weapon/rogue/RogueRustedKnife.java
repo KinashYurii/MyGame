@@ -18,7 +18,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RogueRustedKnife implements Weapon {
+
+    @Builder.Default
     double poisonDamage = 2;
+    @Builder.Default
     @Getter
     private int damage = 4;
     @Getter

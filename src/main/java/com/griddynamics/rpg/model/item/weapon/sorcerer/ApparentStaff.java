@@ -20,7 +20,9 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApparentStaff implements Weapon {
+    @Builder.Default
     private int intelligence = 1;
+    @Builder.Default
     private int damage = 4;
     @Getter
     private final WeaponType weaponType = WeaponType.TWO_HAND_WEAPON;
@@ -30,9 +32,12 @@ public class ApparentStaff implements Weapon {
     @ToString.Exclude
     @Getter
     private final Set<SpecializationType> specializationTypes = EnumSet.of(SpecializationType.SORCERER);
+    @Builder.Default
     private int roll = 1;
+    @Builder.Default
     private int ammo = 2;
-    private int currentAmmo = ammo;
+    @Builder.Default
+    private int currentAmmo = 2;
     @ToString.Exclude
     private int heroIntelligenceTemp;
 
